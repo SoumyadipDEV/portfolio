@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&family=Maven+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>My Portfolio</title>
+    <style>
+        /* Your existing styles remain unchanged */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #0c9bb8;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        nav ul li b {
+            color: #e80d82;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        #hero {
+            background-image: url('bgimg.jpg');
+            background-size: 100%;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: hwb(161 5% 24%);
+            align-items: center;
+            size: 45px;
+            width: 50%;
+            justify-content: center
+        }
+
+        h1 {
+            font-size: 40px;
+            font-family: 'Domine', serif;
+            margin-bottom: 20px;
+        }
+
+        #about {
+            /*background-color: #6F4E37;*/
+            background-image: url('abo.jpg');
+            background-size: 100%;
+            height: 680px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #Education {
+            background-color: #1bbac5;
+            background-image: url('edu.jpg');
+            background-size: 100%;
+            height: 1000px;
+        }
+
+        #Experiences {
+            background-color: #7c22a6;
+            background-image: url('job.jpg');
+            background-size: 100%;
+            height: 1000px;
+        }
+
+        #Others {
+            background-color: #a66622;
+            background-size: 100%;
+            height: 1000px;
+        }
+
+        .project {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .project h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project h4 {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        #contact {
+            background-color: #f4f4f4;
+            background-image: url('contact.jpg');
+            background-size: 100%;
+            height: 580 px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+
+        .container2 {
+            display: flex;
+            align-items: flex-end;
+            size: 45px;
+            width: 20%;
+            flex-direction: column-reverse;
+            margin-inline-start: auto;
+        }
+
+        img {
+            max-width: 50%
+        }
+
+        .image {
+            flex-basis: 30%;
+            width: 150px 100px;
+        }
+
+        .personal-info {
+            max-width: 1345px;
+            size: 45px;
+            width: 20%;
+            margin-left: 53px;
+            margin-top: 95px;
+        }
+
+        .personal-info2 {
+            max-width: 1345px;
+            align-items: baseline;
+            size: 45px;
+            justify-content: space-evenly;
+            width: 50%;
+            margin-left: 20px;
+            margin-top: 0px;
+            display: flex;
+            align-content: flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+            width: 30%;
+        }
+
+        .button {
+            border: none;
+            /*color: green;*/
+            /*padding: 15px 32px;*/
+            text-align: center;
+            text-decoration: none;
+            display: inline-flexbox;
+            font-size: 10px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position: relative;
+            margin-left: 850px;
+        }
+
+        /* New or modified styles for enhanced design */
+        body {
+            font-family: 'Maven Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #d8db15b3;
+        }
+
+        header {
+            background-color: #644a99;
+            color: #fff;
+            text-align: center;
+            padding: 7px;
+            position: fixed;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e80d82;
+        }
+
+        /* Update styles for sections */
+        section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: turquoise;
+        }
+
+        section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: darkseagreen;
+        }
+
+        .container {
+            max-width: 1200%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Update styles for form elements */
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: yellow;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #644a99;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e80d82;
+        }
+
+        footer {
+            background-color: transparent;
+            color: #fff;
+            padding: 2px;
+            text-align: left;
+            position: fixed;
+            bottom: 0;
+            width: 60%;
+        } 
+
+        /* Floating back-to-top button */
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #644a99;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #e80d82;
+        }
+
+        /* Styles for the social media icons on the contact page */
+        .social-icons-vertical {
+            position: fixed;
+            top: 75%; /* Adjust vertically as needed */
+            right: 60px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-icons-vertical a {
+            margin-bottom: 10px; /* Adjust spacing between icons */
+            text-decoration: none;
+            color: #cf2c2c; /* Adjust icon color */
+            font-size: 40px; /* Adjust icon size */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML content remains unchanged -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#Experiences">Experiences</a></li>
+                    <li><a href="#Others">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="button">
+                        <a href="resume.pdf" download="Soumyadip_Banerjee_Resume.pdf" target="_blank">
+                            <button type="button">Download My Resume</button>
+                        </a>
+                    </li>
+                    
+                    <!--<li><button href="#ggh">Soumyadip</button></li>-->
+                </ul>
+            </nav>
+        </header>
+        
+    
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p1>Hi, I'm Soumyadip Banerjee, a web developer.</p1>
+            </div>
+            <div class="container2">
+                <div class="image">
+                    <img src="Logo.jpeg">
+                </div>
+            </div>
+        </section>
+    
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I am a passionate web developer with expertise in HTML, CSS, and JavaScript. I enjoy creating beautiful
+                    and user-friendly websites.</p>
+            </div>
+            <div class="personal-info">
+                <h3>Personal Information</h3>
+            </div>
+            <div class="personal-info2">
+                <p>Name: Soumyadip Banerjee </p>
+                <p>Date of Birth: 20/05/1999 </p>
+                <p>Nationality: Indian</p>
+                <p>Gender: Male</p>
+                <p>Address: New Town, Kolkata, India, 700156</p>
+            </div>
+        </section>
+        </section>
+    
+        <section id="Education">
+            <div class="container">
+                <h2>My Education</h2>
+                <div class="project">
+                    <h3>Secondary Examination (10th Board)</h3>
+                    <p>From School GORABAZAR ISWAR CHANDRA INSTITUTION</p>
+                    <p>Marks Obtained: 75 Percentage</p>
+                    <p>Passed Year: 2015</p>
+                </div>
+                <div class="project">
+                    <h3>Higher Secondary Examination (10+2 Board)</h3>
+                    <p>From School GORABAZAR ISWAR CHANDRA INSTITUTION</p>
+                    <p>Marks Obtained: 70 Percentage</p>
+                    <p>Passed Year: 2017</p>
+                </div>
+                <div class="project">
+                    <h3>Diploma In Electronics & Telecommunication Engineering</h3>
+                    <p>From College Central Calcutta Polytechnic (GOVT.)</p>
+                    <p>Marks Obtained: 76.3 Percentage</p>
+                    <p>Passed Year: 2020</p>
+                </div>
+                <div class="project">
+                    <h3>B. Tech In Electronics & Communication Engineering</h3>
+                    <p>From College SWAMI VIVEKANANDA INSTITUTE OF SCIENCE & TECHNOLOGY</p>
+                    <p>Passed Year: Persuing (2024 Batch)</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="Experiences">
+            <div class="container">
+                <h2>My Job Experiences</h2>
+                <div class="project">
+                    <h3>Company: Aegis Global (BPO)</h3>
+                    <p>Job role: Customer Support Executive</p>
+                    <p>Process : Vodafone Idea Ltd.</p>
+                    <p>Duration: 1 Year (July 2019 - July 2020)</p>
+                    <p>Switch Reason: Pandemic Recession</p>
+                </div>
+                <div class="project">
+                    <h3>Teleperformance India (BPO)</h3>
+                    <p>Job role: Phone Banking Associate</p>
+                    <p>Process : State Bank Of India</p>
+                    <p>Duration: 9 Months (Nov 2020 - July 2021)</p>
+                    <p>Switch Reason: Better Job Oppertunity</p>
+                </div>
+                <div class="project">
+                    <h3>Suraksha Diagnostics Pvt. Ltd. (Healthcare)</h3>
+                    <p>Job role: IT Support Executive (ERP)</p>
+                    <p>Process : IT Applications</p>
+                    <p>Duration: Currently Employed here (From Sept 2021)</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="Others">
+            <div class="container">
+                <h2>Few more things about me</h2>
+                <div class="project">
+                    <h3>My Skills</h3>
+                    <h4>Technical Skills</h4>
+                    <p>Familear with: Visual Studio, Microsoft SQL Server Management Studio, Power BI</p>
+                    <p>Expart in: Microsoft Dynamics AX 2012, Microsoft Word/Excel/Powerpoint/Outlook</p>
+                    <p>Language Known: HTML, CSS, C++</p>
+                    <h4>Interpersonal Skills</h4>
+                    <p>Self-Driven, Leadership, Encouraging nature, Listening, Negotiation, Positive Attitude, Teamwork</p>
+                </div>
+                <div class="project">
+                    <h3>Language Known</h3>
+                    <h4>Professional Proficiency</h4>
+                    <p>English Language & Hindi Language</p>
+                    <h4>Native Language</h4>
+                    <p>Bengali Language</p>
+                </div>
+                <div class="project">
+                    <h3>Hobbies and Interests</h3>
+                    <p>Listning Music, Travelling, Learning new things</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="contact">
+            <div class="container">
+                <h2>Get in touch with me</h2>
+                <form action="https://formspree.io/f/mwkdjrjn" method="POST">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email Id:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Things you want to say to me:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>            
+            </div>
+
+            <div class="social-icons-vertical">
+                <a href="https://www.linkedin.com/in/soumyadip-banerjee-4b1928283" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>                
+                <a href="https://twitter.com/soumyadip815" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="https://www.instagram.com/its_aashb" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+                <a href="https://www.facebook.com/akash.banerjee.528" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <!-- Add more social media links and icons as needed -->
+            </div>
+
+        </section>
+    
+    <!-- Back-to-top button -->
+    <a href="#hero" class="back-to-top">Back to Top</a>
+
+    <footer>
+        <p>&copy; 2023, Soumyadip Banerjee. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for back-to-top button -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const backToTopBtn = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Smooth scroll to top
+        document.querySelector('.back-to-top').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
